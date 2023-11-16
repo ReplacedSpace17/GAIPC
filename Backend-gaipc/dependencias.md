@@ -5,14 +5,13 @@ pip install Flask-CORS
 
 Luego, activa el entorno virtual:
 
-widows:
+windows:
 venv\Scripts\activate
-
 venv\Scripts\deactivate
 
 
 linux:
-source venv/bin/activate
+source venv_linux/bin/activate
 deactivate
 
 
