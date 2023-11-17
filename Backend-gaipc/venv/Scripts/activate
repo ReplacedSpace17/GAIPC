@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Syste\OneDrive\Documentos\GitHub\GAIPC-genetics-algoritmics-pagtogens-cetaceos\Backend-gaipc\venv"
+VIRTUAL_ENV="C:\Users\Syste\OneDrive\Documentos\GitHub\GAIPC\Backend-gaipc\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
