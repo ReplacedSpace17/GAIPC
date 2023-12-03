@@ -12,11 +12,16 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import teclogo from './assets/tecnm.png';
+import { useNavigate } from 'react-router-dom';
+const pages = ['Inicio', 'Participantes', 'Registro', 'Conferencias'];
 
 function HeaderMenu() {
+  const navigate = useNavigate();
+  const goParticipantes = () => {
+    navigate('/Participantes');
+  }
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -35,11 +40,15 @@ function HeaderMenu() {
     setAnchorElUser(null);
   };
 
+  const handleGoHome = () => {
+    navigate('/');
+  };
+
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" sx={{ backgroundColor: 'rgb(22, 65, 129)' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Avatar src={teclogo} sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -94,7 +103,7 @@ function HeaderMenu() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <Avatar src={teclogo} sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -114,7 +123,13 @@ function HeaderMenu() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            <Button
+              onClick={handleGoHome}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Inicio
+            </Button>
+            {pages.slice(1).map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -124,39 +139,10 @@ function HeaderMenu() {
               </Button>
             ))}
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
+
 export default HeaderMenu;

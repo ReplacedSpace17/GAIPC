@@ -1,0 +1,166 @@
+.bodyParticipantes {
+    background-color: rgb(216, 224, 230);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.contentButton {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.buttonAdd {
+    background-color: #3aa856;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.buttonAdd:hover {
+    background-color: rgb(39, 39, 39);
+    color: white;
+
+}
+
+.buttonAdd:active {
+    transform: scale(0.95);
+}
+
+/*//////////////////////////////////////////////-----------> form*/
+.containerForm {
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    width: 20%;
+    min-width: 550px;
+    border-radius: 10px;
+    box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.123);
+}
+
+.formParticipante {
+    
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputForm {
+    
+    background-color: rgb(190, 158, 158);
+
+}
+
+.ContentcontentAvatar {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.contentAvatar {
+
+    width: 100px;
+    margin: 10px;
+
+}
+
+.imgAvatarForm {
+    width: 100%;
+}
+
+.btnForm {
+    background-color: #3aa856;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin: 15px;
+}
+
+.btnForm:hover {
+    background-color: rgb(39, 39, 39);
+    color: white;
+
+}
+
+
+.input-container {
+    position: relative;
+    margin: 7px;
+}
+
+.input {
+    width: 250px;
+    font-size: 1em;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+    color: #333;
+}
+
+.input:hover {
+    background-color: #f2f2f2;
+}
+
+.input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+.highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6c63ff;
+    transition: width 0.3s ease;
+}
+
+.input:focus+.highlight {
+    width: 100%;
+}
+
+/* Optional: Animation on focus */
+@keyframes input-focus {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+
+    to {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.input:focus {
+    animation: input-focus 0.3s ease;
+}
+.contentCheckbox{
+    margin: 20px;
+}
+.titleForm{
+    color: #1f1f1f;
+}
