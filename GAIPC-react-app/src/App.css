@@ -1,3 +1,7 @@
-body{
-    
+* {
+    /* Estilos que se aplicarán a todos los elementos */
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }

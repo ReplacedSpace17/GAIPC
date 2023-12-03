@@ -11,6 +11,8 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
+
+
 .contentButton {
     display: flex;
     width: 30%;
@@ -34,6 +36,16 @@
 
 .buttonAdd:active {
     transform: scale(0.95);
+}
+
+.containerCards{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 75%;
+    overflow-y: auto; /* Añade scroll vertical */
 }
 
 /*//////////////////////////////////////////////-----------> form*/
@@ -74,7 +86,7 @@
 
     width: 100px;
     margin: 10px;
-
+    user-select: none;
 }
 
 .imgAvatarForm {

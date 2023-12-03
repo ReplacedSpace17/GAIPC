@@ -7,6 +7,11 @@ body{
   background-color: rgb(10, 42, 90);
   padding: 0;
   margin: 0;
+
+  font-family: 'Hedvig Letters Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .containerLeft{

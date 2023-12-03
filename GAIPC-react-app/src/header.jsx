@@ -21,6 +21,12 @@ function HeaderMenu() {
   const goParticipantes = () => {
     navigate('/Participantes');
   }
+  const goRegistro = () => {
+    navigate('/FormAddParticipante');
+  }
+  const goConferencias = () => {
+    navigate('/Registros');
+  }
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -64,7 +70,7 @@ function HeaderMenu() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            TECNM
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -120,7 +126,7 @@ function HeaderMenu() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            TECNM
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Button
@@ -129,15 +135,26 @@ function HeaderMenu() {
             >
               Inicio
             </Button>
-            {pages.slice(1).map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={goParticipantes}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Participantes
+            </Button>
+            <Button
+              onClick={goRegistro}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Registro
+            </Button>
+            <Button
+              onClick={goConferencias}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Conferencias
+            </Button>
+            
+           
           </Box>
         </Toolbar>
       </Container>
@@ -146,3 +163,4 @@ function HeaderMenu() {
 }
 
 export default HeaderMenu;
+

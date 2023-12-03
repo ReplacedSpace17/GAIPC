@@ -4,7 +4,7 @@ const { Pool } = require('pg');
 const connection = new Pool({
   user: 'postgres',
   host: 'localhost', // o la dirección de tu servidor PostgreSQL
-  database: 'glucontroldb',
+  database: 'conferencias',
   password: 'root',
   port: 5432, // El puerto predeterminado de PostgreSQL es 5432
 });
@@ -20,7 +20,7 @@ connection.connect((error, client, done) => {
   }
 });
 
-const welcomeMessage = '------------------------ 🚀🖥️ BIENVENIDO AL BACKEND DE GLUCONTROL  🖥️🚀 ------------------------';
+const welcomeMessage = '------------------------ 🚀🖥️ BIENVENIDO AL BACKEND   🖥️🚀 ------------------------';
 const loadingChars = '▉▊▋▌▍▎▏';
 const delay = 50;
 
