@@ -4,7 +4,9 @@ body{
   display: flex;
   justify-content: start;
   align-items: center;
-  background-color: rgb(10, 42, 90);
+  
+  background-color:rgb(216, 224, 230);
+  
   padding: 0;
   margin: 0;
 
@@ -15,10 +17,10 @@ body{
 }
 
 .containerLeft{
-
+  background-color: rgb(10, 42, 90);
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 30vw;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -28,7 +30,7 @@ body{
 background-color: seashell;
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 70vw;
   justify-content: center;
   align-items: center;
   height: 100vh;

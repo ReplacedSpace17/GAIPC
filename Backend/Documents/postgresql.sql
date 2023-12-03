@@ -12,16 +12,17 @@ CREATE TABLE "participantes" (
 
 CREATE TABLE "conferencias" (
   "cif" serial PRIMARY KEY,
- "conferencia" VARCHAR(255),
- "ponente" VARCHAR(255),
- "hora" VARCHAR(255)
+  "conferencia" VARCHAR(255),
+  "ponente" VARCHAR(255),
+  "hora" VARCHAR(255)
 );
 
 CREATE TABLE "asistente" (
   "aid" serial PRIMARY KEY,
- "conferencia_id" int,
- "nombre_id" int
+  "conferencia_id" int REFERENCES "conferencias"("cif"),
+  "nombre_id" int REFERENCES "participantes"("pid")
 );
+
 
 
 

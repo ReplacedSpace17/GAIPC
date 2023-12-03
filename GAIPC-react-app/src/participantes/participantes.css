@@ -50,10 +50,11 @@
 
 /*//////////////////////////////////////////////-----------> form*/
 .containerForm {
+    margin-top: 200px;
     background-color: rgb(241, 241, 241);
     text-align: center;
     width: 20%;
-    min-width: 550px;
+    min-width: 700px;
     border-radius: 10px;
     box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.123);
 }

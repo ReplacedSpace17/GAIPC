@@ -1,6 +1,6 @@
 
 import HeaderMenu from "../header";
-import './Home.css';
+import './home.css';
 import teclogo from '../assets/tecnm.png';
 import clubes from '../assets/clubesLogo.png';
 import { useNavigate } from 'react-router-dom';
